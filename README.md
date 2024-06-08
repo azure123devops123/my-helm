@@ -32,6 +32,17 @@
 **Youtube video 2. Helm - Install software in Kubernetes: Practical Tutorial**
 - https://www.youtube.com/watch?v=gg-GuHs8Nsk&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi&index=2
 
+**Pre-requisite**
+- We must have a k8s cluster up and running (minikube on workstation or any other on linux server)
+
+**Install Helm Cli Utility**
+- On MacOS: 
+    ```brew install helm```
+
+
+
+
+
 **Youtube video 3. How to Create Helm Charts - The Ultimate Guide**
 - https://www.youtube.com/watch?v=jUYNS90nq8U&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi&index=3
 
