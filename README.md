@@ -35,26 +35,26 @@
 **Pre-requisite**
 - We must have a k8s cluster up and running (minikube on workstation or any other on linux server)
 - Minikube Cluster:
-  `minikube start --nodes=1 --profile=local-cluster --driver=docker`
+    - `minikube start --nodes=1 --profile=local-cluster --driver=docker`
 
-  `minikube status --profile=local-cluster`     - Minikube cluster is running
+    - `minikube status --profile=local-cluster`     - Minikube cluster is running
 
 **Install Helm CLI Utility**
 - On MacOS: 
-    `brew install helm`
+    - `brew install helm`
 
-    `helm version`      - Installed Version: v3.15.1
+    - `helm version`      - Installed Version: v3.15.1
 
 - Prometheus Installation using helm chart: 
   1. Search for official 'prometheus' on the WEBSITE: https://artifacthub.io/     Click on install and it will give us two following commands to install it.
 
-  `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`   - Add Prometheus Community Repository
+    - `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`   - Add Prometheus Community Repository
 
-  `helm repo list`          -  Now we have a repo
+    - `helm repo list`          -  Now we have a repo
 
-  `helm install my-prometheus prometheus-community/prometheus --version 25.21.0`            - Install chart
+    - `helm install my-prometheus prometheus-community/prometheus --version 25.21.0`            - Install chart
 
-  `helm search repo prometheus-community`       - Can see all the packages inside 'prometheus-community' repo
+    - `helm search repo prometheus-community`       - Can see all the packages inside 'prometheus-community' repo
 
   ``
 
