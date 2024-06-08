@@ -34,6 +34,10 @@
 
 **Pre-requisite**
 - We must have a k8s cluster up and running (minikube on workstation or any other on linux server)
+- Minikube Cluster:
+  `minikube start --nodes=1 --profile=local-cluster --driver=docker`
+
+  `minikube status --profile=local-cluster`     - Minikube cluster is running
 
 **Install Helm Cli Utility**
 - On MacOS: 
@@ -41,6 +45,7 @@
 
     `helm version`      - Installed Version: v3.15.1
 
+- Packages: https://artifacthub.io/     OR   
 
 
 
