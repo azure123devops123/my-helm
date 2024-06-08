@@ -39,13 +39,17 @@
 
   `minikube status --profile=local-cluster`     - Minikube cluster is running
 
-**Install Helm Cli Utility**
+**Install Helm CLI Utility**
 - On MacOS: 
     `brew install helm`
 
     `helm version`      - Installed Version: v3.15.1
 
-- Packages: https://artifacthub.io/     OR   
+- Packages: 
+  1. Search for official 'prometheus' on the WEBSITE: https://artifacthub.io/     
+  OR  
+  2. COMMAND LINE SEARCH: `helm search hub prometheus`
+
 
 
 
