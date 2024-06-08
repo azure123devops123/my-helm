@@ -37,7 +37,7 @@
 
 **Install Helm Cli Utility**
 - On MacOS: 
-    ```brew install helm```
+    `brew install helm`
 
 
 
