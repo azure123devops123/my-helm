@@ -50,7 +50,7 @@
 
     - `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`   - Add Prometheus Community Repository
 
-    - `helm repo list`          -  Now we have a repo
+    - `helm repo list`          -  Now we have a 'prometheus-community' repo
 
     - `helm install my-prometheus prometheus-community/prometheus --version 25.21.0`            - Install chart
 
