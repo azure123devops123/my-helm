@@ -40,13 +40,19 @@
     - `minikube status --profile=local-cluster`     - Minikube cluster is running
 
 **Install Helm CLI Utility**
+
 - On MacOS: 
     - `brew install helm`
 
     - `helm version`      - Installed Version: v3.15.1
 
 - Prometheus Installation using helm chart: 
-  1. Search for official 'prometheus' on the WEBSITE: https://artifacthub.io/     Click on install and it will give us two following commands to install it.
+  
+  1. COMMAND LINE SEARCH: `helm search hub prometheus`      
+  
+  OR
+
+  2. Search for official 'prometheus' on the WEBSITE: https://artifacthub.io/     Click on install and it will give us two following commands to install it.
 
     - `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`   - Add Prometheus Community Repository
 
@@ -56,14 +62,31 @@
 
     - `helm search repo prometheus-community`       - Can see all the packages inside 'prometheus-community' repo
 
-  ``
+    - `helm install my-prometheus prometheus-community/prometheus --version 25.21.0`
 
-  OR  
-  2. COMMAND LINE SEARCH: `helm search hub prometheus`
+    - `kubectl get all`         - WAIT UNTIL EVERYTHING IS UP AND RUNNING
 
+    - `helm ls --all-namespaces`
 
+    - `helm status my-prometheus`       
+    
+        - Copy the BOTH COMMANDS so we can get Prometheus server URL like (127.0.0.1:9090)
+        - Copy the BOTH COMMANDS so we can get Alertmanager server URL like (127.0.0.1:9093)
+        - Copy the BOTH COMMANDS so we can get PushGateway server URL like (127.0.0.1:9091)
 
+- Check releases:
+   
+    - `helm ls --all-namespaces`    OR      `helm ls -A`
+   
+- Lets say we want another release into a 'dev' namespace.
 
+   - `kubectl create namespace dev`         - Create a new dev namespace
+
+   - `kubectl get namespaces`               - We can see the 'dev' namespace
+
+   - `helm install my-prometheus-dev prometheus-community/prometheus --version 25.21.0 --namespace dev`
+
+   - `helm ls --all-namespaces`    OR     `helm ls -A`   - We can see one release in a 'default' namespace and one in the 'dev' namespace
 
 **Youtube video 3. How to Create Helm Charts - The Ultimate Guide**
 - https://www.youtube.com/watch?v=jUYNS90nq8U&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi&index=3
