@@ -1,6 +1,6 @@
 ## HELP LEARNING VIDEO SERIES ##
 
-## CODE REPO: ##
+**CODE REPO:**
 - https://github.com/devopsjourney1/helm-webapp
 
 **Youtube video 1. Helm and Helm Charts Explained - Helm Tutorial for Beginners**
