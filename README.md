@@ -6,14 +6,24 @@
 **Youtube video 1. Helm and Helm Charts Explained - Helm Tutorial for Beginners**
 - https://www.youtube.com/watch?v=w51lDVuRWuk&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi
 
-**MAIN POINTS**
+- In this guide I go over the complete theory of how Helm works with Kubernetes and how Helm Charts are used to install software into Kubernetes clusters in the real world.
+
+**IMPORTANT POINTS:**
+
 1. Helm is K8s Package Manager like (brew, apt, dnf) to install application on a server or pc.
+
 2. Helm can be used to INSTALL, UPGRADE and ROLLBACK K8s application.
+
 3. Provides simplification during the complex deployments. Like installations of 'prometheus' using 'helm chart' from 'Artifact Hub'. We don't need to reinvent the wheel.
+
 4. Helm chart is collection of yml files bundled together.
+
 5. Helm chart also use 'TEMPLATING' allowing customization (Dynamic Configuration).
+
 6. Three main components: HELM CHART, CONFIG VALUES and HELM RELEASES.
+
 7. Helm Templating Engine. Define Common Blueprint through helm chart for different environments like (DEV, TEST, PROD) and any dynamic values can be overridden. values.yml, values-dev.yml, values-test.yml, values-prod.yml
+
 8. Directory Structure:   
    - top level directory - NAME OF HELM CHART
    - chart.yaml - META DATA ABOUT THE CHART such as name, description and version
@@ -21,19 +31,28 @@
    - Value configuration files (values.yml, values-dev.yml, values-test.yml, values-prod.yml)
    - Helm V2 (have TILLER service) because used client server model - Helm V3 (don't have TILLER service) because now Helm cli manages all releases directly using K8s api.
 
-**Helm Commands**
+**Helm Main Commands:**
+
 1. helm repo [Command]      - Repository Management, and listing helm packages (add, list, remove, update)
+
 2. helm install/uninstall   - Install/Uninstall a helm chart (helm install HELM CHART UNIQUE NAME - LOCATION OF HELM CHART CAN BE LOCAL PATH ON THE FILE SYSTEM OR REPO/CHART NAME - INLINE PARAMETERS OR ADDITIONAL VALUE YAML FILES )
+
 3. helm list [flags]        - List out helm releases in your environment (helm list --all-namespaces)
+
 4. helm status [release_name]    - Gives Further Details of a helm installation: revision #, deployment time, current status, etc. (helm status helm-chart-name)
+
 5. helm uninstall [release_name] --keep-history     (--keep-history flag is helpful for rollback)
 
 
 **Youtube video 2. Helm - Install software in Kubernetes: Practical Tutorial**
 - https://www.youtube.com/watch?v=gg-GuHs8Nsk&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi&index=2
 
+- In this video I take you over how to get Helm installed and how to deploy applications into your Kubernetes cluster using Helm Charts. We go over how to release, update, rollback and customize Helm Charts. This tutorial is applicable to Mac OS, Windows and Linux.
+
 **Pre-requisite**
+
 - We must have a k8s cluster up and running (minikube on workstation or any other on linux server)
+
 - Minikube Cluster:
     - `minikube start --nodes=1 --profile=local-cluster --driver=docker`
 
@@ -87,6 +106,36 @@
    - `helm install my-prometheus-dev prometheus-community/prometheus --version 25.21.0 --namespace dev`
 
    - `helm ls --all-namespaces`    OR     `helm ls -A`   - We can see one release in a 'default' namespace and one in the 'dev' namespace
+
+- Lets say we want to uninstall helm release into a 'default' namespace.
+
+   - `helm uninstall my-prometheus --keep-history`
+
+   - `helm ls -A`           - Now we have only one release into 'dev' namespace only
+
+   - `helm ls -A -a`        - We can see all the installed and uninstalled releases
+
+- Lets say we want to upgrade helm release into the 'dev' namespace.
+
+   - `helm upgrade my-prometheus-dev prometheus-community/prometheus --version 25.0.0 -n dev`
+
+   - `helm ls -n dev`       - We can see REVISION is 2 and also CHART is 25.0.0
+
+- Lets say we want to rollback our helm release into the 'dev' namespace.
+
+   - `helm history my-prometheus-dev -n dev`        - We can see the whole history of the release in the 'dev'
+   
+   - `helm rollback my-prometheus-dev 1 -n dev`     - We want ot rollback to revision 1
+
+   - `helm ls -n dev`       - We can see that its the revision 3 but the we successfully rollback to CHART prometheus-25.21.0
+
+   - `helm history my-prometheus-dev -n dev`
+
+**WE CAN SEE THE DETAILED DOCUMENTATION ON THE www.artifacthub.io**
+
+- Cleanup:
+
+   - `helm uninstall my-prometheus-dev --keep-history -n dev` 
 
 **Youtube video 3. How to Create Helm Charts - The Ultimate Guide**
 - https://www.youtube.com/watch?v=jUYNS90nq8U&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi&index=3
