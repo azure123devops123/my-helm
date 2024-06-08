@@ -47,6 +47,7 @@
 
 - Packages: 
   1. Search for official 'prometheus' on the WEBSITE: https://artifacthub.io/     Click on install and it will give us two following commands to install it.
+  
   `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`   - Add repository
 
   `helm install my-prometheus prometheus-community/prometheus --version 25.21.0`            - Install chart
