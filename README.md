@@ -239,9 +239,7 @@ OR
 
 **For different environments create different values-dev.yaml and values-prod.yaml files which will override the default values.yaml**
 
-Create the dev and pod names:
-
-            kubectl create namespace dev
+            kubectl create namespace dev        # Create the dev namespace
 
             kubectl create namespace prod
 
