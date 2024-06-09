@@ -51,7 +51,8 @@
 
 **Pre-requisite**
 
-- We must have a k8s cluster up and running (minikube on workstation or any other on linux server)
+1. We must have a k8s cluster up and running (minikube on workstation or any other on linux server)
+2. We must installed 'kubectl'
 
 - Minikube Cluster:
     - `minikube start --nodes=1 --profile=local-cluster --driver=docker`
@@ -138,5 +139,72 @@
    - `helm uninstall my-prometheus-dev --keep-history -n dev` 
 
 **Youtube video 3. How to Create Helm Charts - The Ultimate Guide**
+
 - https://www.youtube.com/watch?v=jUYNS90nq8U&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi&index=3
+
+- Learn how to create your own Helm Charts! in this video I take you through how you can convert a Kubernetes manifest into a deployable Helm Chart.
+
+- STEP NO. 1 - Start the minikube cluster
+
+   - `minikube start`         - Make sure minikube cluster is running
+
+- STEP NO. 2 - Create a helm chart which will create a general scaffolding for us:
+
+   - `helm create webapp1`          - It will create a directory structure for us
+
+   - `tree webapp1`
+         webapp1
+         ├── Chart.yaml
+         ├── charts
+         ├── templates
+         │   ├── NOTES.txt
+         │   ├── _helpers.tpl
+         │   ├── deployment.yaml
+         │   ├── hpa.yaml
+         │   ├── ingress.yaml
+         │   ├── service.yaml
+         │   ├── serviceaccount.yaml
+         │   └── tests
+         │       └── test-connection.yaml
+         └── values.yaml
+
+         4 directories, 10 files
+
+ - STEP NO. 3 - Delete unnecessary files and directories from 'templates' directory.
+
+  - `cd webapp1/templates`
+
+  - `rm -rf ingress.yaml serviceaccount.yaml _helpers.tpl hpa.yaml tests`
+
+  - `cd ../../`
+
+  - `tree webapp`
+      webapp1
+      ├── Chart.yaml          # name and version will be change in this file
+      ├── charts              # If our charts has any dependencies on other charts. We will throw them here
+      ├── templates
+      │   ├── NOTES.txt
+      │   ├── deployment.yaml
+      │   └── service.yaml
+      └── values.yaml         # This is the default configuration for our helm chart
+
+      3 directories, 5 files
+
+- STEP NO. 4 - Copy the K8s manifest files into the 'webapp1/templates' directory.
+
+**Minikube Commands Helping Resource:**
+
+https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Fx86-64%2Fstable%2Fbinary+download#Service
+
+- STEP NO. 5 - Move into the parent directory and then run the following commands to install our chart and then check in the browser:
+
+  - `helm install mywebapp-release webapp1/`    - 'mywebapp-release' is our release name
+
+  - `kubectl get po -A`               - Wait until everything is up and running
+
+  - `kubectl get all`
+
+  - `kubectl get services`          - Get the service name
+
+  - `minikube service mywebapp`     - minikube launch a web browser
 

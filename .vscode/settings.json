@@ -1,6 +1,10 @@
 {
     "cSpell.words": [
         "Alertmanager",
+        "artifacthub",
+        "configmap",
+        "mywebapp",
+        "serviceaccount",
         "TEMPLATING"
     ]
 }
