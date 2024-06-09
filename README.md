@@ -206,5 +206,4 @@ https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Fx86-64%2Fstable%2Fbinar
 
   - `kubectl get services`          - Get the service name
 
-  - `minikube service mywebapp`     - minikube launch a web browser
-
+  - `minikube service mywebapp`     - minikube launch a web browser -> http://127.0.0.1:51311/hello
