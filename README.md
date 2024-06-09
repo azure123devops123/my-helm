@@ -237,7 +237,7 @@ OR
 
 - `curl 127.0.0.1:8080/hello`          (WORKING)
 
-**For different environments create different values-dev.yaml and values-prod.yaml files which will override the default values.yaml**
+> **For different environments create different values-dev.yaml and values-prod.yaml files which will override the default values.yaml**
 
             kubectl create namespace dev        # Create the dev namespace
 
