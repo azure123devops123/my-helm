@@ -144,11 +144,11 @@
 
 - Learn how to create your own Helm Charts! in this video I take you through how you can convert a Kubernetes manifest into a deployable Helm Chart.
 
-- STEP NO. 1 - Start the minikube cluster
+**STEP NO. 1 - Start the minikube cluster:**
 
    - `minikube start`         - Make sure minikube cluster is running
 
-- STEP NO. 2 - Create a helm chart which will create a general scaffolding for us:
+**STEP NO. 2 - Create a helm chart which will create a general scaffolding for us:**
 
    - `helm create webapp1`          - It will create a directory structure for us
 
@@ -170,7 +170,7 @@
 
          4 directories, 10 files
 
- - STEP NO. 3 - Delete unnecessary files and directories from 'templates' directory.
+**STEP NO. 3 - Delete unnecessary files and directories from 'templates' directory.**
 
   - `cd webapp1/templates`
 
@@ -190,13 +190,13 @@
 
       3 directories, 5 files
 
-- STEP NO. 4 - Copy the K8s manifest files into the 'webapp1/templates' directory.
+**STEP NO. 4 - Copy the K8s manifest files into the 'webapp1/templates' directory.**
 
 **Minikube Commands Helping Resource:**
 
 https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Fx86-64%2Fstable%2Fbinary+download#Service
 
-- STEP NO. 5 - Move into the parent directory and then run the following commands to install our chart and then check in the browser:
+**STEP NO. 5 - Move into the parent directory and then run the following commands to install our chart and then check in the browser:**
 
   - `helm install mywebapp-release webapp1/`    - 'mywebapp-release' is our release name
 
