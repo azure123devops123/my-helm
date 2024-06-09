@@ -3,7 +3,7 @@
 **CODE REPO:**
 - https://github.com/devopsjourney1/helm-webapp
 
-**Youtube video 1. Helm and Helm Charts Explained - Helm Tutorial for Beginners**
+## Youtube video 1. Helm and Helm Charts Explained - Helm Tutorial for Beginners##
 - https://www.youtube.com/watch?v=w51lDVuRWuk&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi
 
 - In this guide I go over the complete theory of how Helm works with Kubernetes and how Helm Charts are used to install software into Kubernetes clusters in the real world.
@@ -44,7 +44,7 @@
 5. helm uninstall [release_name] --keep-history     (--keep-history flag is helpful for rollback)
 
 
-**Youtube video 2. Helm - Install software in Kubernetes: Practical Tutorial**
+## Youtube video 2. Helm - Install software in Kubernetes: Practical Tutorial##
 - https://www.youtube.com/watch?v=gg-GuHs8Nsk&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi&index=2
 
 - In this video I take you over how to get Helm installed and how to deploy applications into your Kubernetes cluster using Helm Charts. We go over how to release, update, rollback and customize Helm Charts. This tutorial is applicable to Mac OS, Windows and Linux.
@@ -138,7 +138,7 @@
 
    - `helm uninstall my-prometheus-dev --keep-history -n dev` 
 
-**Youtube video 3. How to Create Helm Charts - The Ultimate Guide**
+## Youtube video 3. How to Create Helm Charts - The Ultimate Guide##
 
 - https://www.youtube.com/watch?v=jUYNS90nq8U&list=PLnFWJCugpwfzCjufOk52ufg7CDxpLEmXi&index=3
 
