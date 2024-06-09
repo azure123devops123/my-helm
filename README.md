@@ -257,4 +257,4 @@ Create the dev and pod names:
 
 - `helm ls -A -a`
 
-**Now access our web application & make sure we are getting both custom headers for prod and dev environments.**
+**Now access the web application in the dev and prod environment & make sure we are getting both custom headers for prod and dev environments.**
