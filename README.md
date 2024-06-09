@@ -241,19 +241,19 @@ OR
 
 Create the dev and pod names:
 
-- `kubectl create namespace dev`
+            kubectl create namespace dev
 
-- `kubectl create namespace prod`
+            kubectl create namespace prod
 
-- `helm install mywebapp-release-dev webapp1/ --values webapp1/values.yaml -f webapp1/values-dev.yaml -n dev`
+            helm install mywebapp-release-dev webapp1/ --values webapp1/values.yaml -f webapp1/values-dev.yaml -n dev
 
-- `helm install mywebapp-release-prod webapp1/ --values webapp1/values.yaml -f webapp1/values-prod.yaml -n prod`
+            helm install mywebapp-release-prod webapp1/ --values webapp1/values.yaml -f webapp1/values-prod.yaml -n prod
 
-- `kubectl get all -A`     - Everything is up and running in all the workspaces
+            kubectl get all -A
 
-- `kubectl get all -n dev`
+            kubectl get all -n dev
 
-- `kubectl get all -n prod`
+            kubectl get all -n prod
 
             helm ls -A -a
 
