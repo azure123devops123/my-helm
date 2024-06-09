@@ -229,6 +229,7 @@ Add the code into NOTES.txt so the user can get the output in the terminal to le
 - `helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml` - Noticed: Release has been upgraded
 
 > Copy the both commands from terminal an run them in the terminal and you will see the PORT FORWARDING:
+
 Forwarding from 127.0.0.1:8080 -> 8080
 
 - Check in the browser:     http://127.0.0.1:8080/hello    (WORKING)
