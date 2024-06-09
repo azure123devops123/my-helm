@@ -1,0 +1,12 @@
+appName: myhelmapp
+
+namespace: default
+
+configmap:
+  name: helmappconfigmapv1.1
+  data:
+    CUSTOM_HEADER: "This app was deployed with helm"
+
+image:
+  name: devopstech24/java-spring-app-ci-pipeline
+  tag: 1.0.0-72

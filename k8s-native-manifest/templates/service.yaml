@@ -4,14 +4,13 @@ metadata:
   name: mywebapp
   namespace: default
   labels:
-    app: myapp 
+    app: mywebapp
 spec:
-  selector:
-    app: myapp
-    tier: frontend
   ports:
-  - port: 80
+  - port: 8080
     protocol: TCP
-    name: springboot
-    targetPort: 8080
+    name: java
+  selector:
+    app: mywebapp
+    tier: frontend
   type: NodePort

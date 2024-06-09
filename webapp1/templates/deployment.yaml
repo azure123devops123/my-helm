@@ -1,30 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mydeployment
-  namespace: default
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
   labels:
-    app: mywebapp
+    app: {{ .Values.appName }}
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: mywebapp
+      app: {{ .Values.appName }}
       tier: frontend
   template:
     metadata:
       labels:
-        app: mywebapp
+        app: {{ .Values.appName }}
         tier: frontend
     spec: # Pod spec
       containers:
       - name: mycontainer
-        image: devopstech24/java-spring-app-ci-pipeline:1.0.0-72
+        image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
         ports:
         - containerPort: 8080
         envFrom:
         - configMapRef:
-            name: myconfigmapv1.0
+            name: {{ .Values.configmap.name }}
         resources:
           requests:
             memory: "16Mi" 

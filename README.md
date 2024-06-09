@@ -207,3 +207,36 @@ https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Fx86-64%2Fstable%2Fbinar
   - `kubectl get services`          - Get the service name
 
   - `minikube service mywebapp`     - minikube launch a web browser -> http://127.0.0.1:51311/hello
+
+  OR
+
+  - `curl localhost:51311/hello`    - We can check in the terminal we can see its returning some traffic.
+
+**STEP NO. 6 - Lets template few things in the service deployment and configmap files and then pass the values.yaml file**
+
+- `helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml` - Noticed: Release has been upgraded
+
+- `helm ls`          - We can see REVISION is updated to 2
+
+- `kubectl get all`  - All the old pods are terminated and the new pods has been created with the new name. Check the age of the pods.
+
+Lets template the rest of our application and upgrade the release:
+
+- `helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml` - Noticed: Release has been upgraded
+
+- `helm ls`          - We can see REVISION is updated to 3
+
+- `kubectl get all`  - All the old pods are terminated and the new pods has been created with the new name. Check the age of the pods.
+
+Add the code into NOTES.txt so the user can get the output in the terminal to let the use know how to access the application.
+
+- `helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml` - Noticed: Release has been upgraded
+
+Copy the both commands from terminal an run them in the terminal and you will see the PORT FORWARDING:
+Forwarding from 127.0.0.1:8080 -> 8080
+
+- Check in the browser:     http://127.0.0.1:8080/hello    (WORKING)
+
+OR 
+
+- `curl 127.0.0.1:8080/hello`          (WORKING)

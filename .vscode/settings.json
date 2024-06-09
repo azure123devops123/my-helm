@@ -3,6 +3,8 @@
         "Alertmanager",
         "artifacthub",
         "configmap",
+        "helmappconfigmapv",
+        "myhelmapp",
         "mywebapp",
         "serviceaccount",
         "TEMPLATING"
