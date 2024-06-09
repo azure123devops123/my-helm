@@ -1,0 +1,5 @@
+namespace: prod
+
+configmap:
+  data:
+    CUSTOM_HEADER: "This app was deployed with helm in the prod namespace"

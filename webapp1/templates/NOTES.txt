@@ -1,2 +1,7 @@
-servicename=$(kubectl get service -l "app={{ .Values.appName }}" -o jsonpath="{.items[0].metadata.name}")
-kubectl --namespace {{ .Values.namespace}} port-forward service/{{ .Values.appName }} 8080:8080
+1. The easiest way to access this service is to let minikube launch a web browser for you when you run below command:
+minikube service {{ .Values.appName }} -n {{ .Values.namespace }}
+
+2. Now application is available and you can access the application on the following route:
+/hello
+
+Note:- You can see that the service is doing loadbalacing for us out of the box. Everytime you refresh you will get the responce from different the different IP ADDRESS.

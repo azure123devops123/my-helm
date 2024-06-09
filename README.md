@@ -168,8 +168,6 @@
          │       └── test-connection.yaml
          └── values.yaml
 
-         4 directories, 10 files
-
 **STEP NO. 3 - Delete unnecessary files and directories from 'templates' directory.**
 
   - `cd webapp1/templates`
@@ -187,8 +185,6 @@
       │   ├── deployment.yaml
       │   └── service.yaml
       └── values.yaml         # This is the default configuration for our helm chart
-
-      3 directories, 5 files
 
 **STEP NO. 4 - Copy the K8s manifest files into the 'webapp1/templates' directory.**
 
@@ -240,3 +236,25 @@ Forwarding from 127.0.0.1:8080 -> 8080
 OR 
 
 - `curl 127.0.0.1:8080/hello`          (WORKING)
+
+**For different environments create different values-dev.yaml and values-prod.yaml files which will override the default values.yaml**
+
+Create the dev and pod names:
+
+- `kubectl create namespace dev`
+
+- `kubectl create namespace prod`
+
+- `helm install mywebapp-release-dev webapp1/ --values webapp1/values.yaml -f webapp1/values-dev.yaml -n dev`
+
+- `helm install mywebapp-release-prod webapp1/ --values webapp1/values.yaml -f webapp1/values-prod.yaml -n prod`
+
+- `kubectl get all -A`     - Everything is up and running in all the workspaces
+
+- `kubectl get all -n dev`
+
+- `kubectl get all -n prod`
+
+- `helm ls -A -a`
+
+**Now access our web application & make sure we are getting both custom headers for prod and dev environments.**
