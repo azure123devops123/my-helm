@@ -255,6 +255,6 @@ Create the dev and pod names:
 
 - `kubectl get all -n prod`
 
-- `helm ls -A -a`
+- ```helm ls -A -a```
 
 **Now access the web application in the dev and prod environment & make sure we are getting both custom headers for prod and dev environments.**
