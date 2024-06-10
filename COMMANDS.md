@@ -2,9 +2,9 @@
 
 1. K8s cluster up and running (Pre-requisite):
 
-         minikube start
+      minikube start
 
-         minikube status
+      minikube status
 
 2. K8s CLI (kubectl) must installed (Pre-requisite):
 
