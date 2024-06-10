@@ -1,4 +1,4 @@
-## :excellent: MacOSX Installation: ##
+## :rose: MacOSX Installation: ##
 
 1. K8s cluster up and running (Pre-requisite):
 
