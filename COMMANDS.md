@@ -62,9 +62,7 @@
 
 ## Basic Commands for templating your web application: ##
 
-      ```mermaid
-      graph LR
-      A --> C(Test the rendering of our template)
+      <!-- Test the rendering of our template -->
 
       helm template mywebapp-release webapp1
 
