@@ -70,7 +70,7 @@
 
       helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml
 
-## :Backhand Index Pointing Right: Basic Commands for templating your web application for different environments (dev, prod):
+## :backhand index pointing right: Basic Commands for templating your web application for different environments (dev, prod):
 
       kubectl create namespace dev
 
