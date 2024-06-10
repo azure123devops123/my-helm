@@ -1,4 +1,4 @@
-## MacOSX Installation: ##
+## :smile: MacOSX Installation: ##
 
 1. K8s cluster up and running (Pre-requisite):
 
@@ -18,7 +18,7 @@
 
          helm version
 
-## Basic Commands for downloading and installing helm chart of **prometheus stack** from artifacthub: ##
+## :smile: Basic Commands for downloading and installing helm chart of **prometheus stack** from artifacthub: ##
 
          helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 
@@ -46,7 +46,7 @@
 
          helm uninstall my-prometheus-dev --keep-history -n dev
 
-## Basic Commands for creating chart of your web application and deploy using helm: ##
+## :smile: Basic Commands for creating chart of your web application and deploy using helm: ##
 
          helm create webapp1
 
@@ -70,7 +70,7 @@
 
       helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml
 
-## Basic Commands for templating your web application for different environments (dev, prod): ##
+## :smile: Basic Commands for templating your web application for different environments (dev, prod): ##
 
       kubectl create namespace dev
 
