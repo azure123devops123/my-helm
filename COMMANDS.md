@@ -48,7 +48,7 @@
 
          helm uninstall my-prometheus-dev --keep-history -n dev
 
-## Basic Commands for creating chart of your web application and deploy using helm##
+## Basic Commands for creating chart of your web application and deploy using helm: ##
 
          helm create webapp1
 
@@ -63,11 +63,11 @@
          curl localhost:51311/hello
 
 
-## Basic Commands for templating your web application ##
+## Basic Commands for templating your web application: ##
 
       helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml
 
-## Basic Commands for templating your web application for different environments (dev, prod)##
+## Basic Commands for templating your web application for different environments (dev, prod): ##
 
       kubectl create namespace dev
 
