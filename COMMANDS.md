@@ -18,7 +18,7 @@
 
          helm version
 
-## :smile: Basic Commands for downloading and installing helm chart of **prometheus stack** from artifacthub: ##
+## ☑️ Basic Commands for downloading and installing helm chart of **prometheus stack** from artifacthub: ##
 
          helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 
@@ -46,7 +46,7 @@
 
          helm uninstall my-prometheus-dev --keep-history -n dev
 
-## :smile: Basic Commands for creating chart of your web application and deploy using helm: ##
+## ☑️ Basic Commands for creating chart of your web application and deploy using helm: ##
 
          helm create webapp1
 
@@ -60,7 +60,7 @@
 
          curl localhost:51311/hello
 
-## :s Basic Commands for templating your web application: ##
+## ☑️ Basic Commands for templating your web application: ##
 
       # Test the rendering of our template
 
