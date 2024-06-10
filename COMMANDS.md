@@ -64,6 +64,8 @@
 
       <!-- Test the rendering of our template -->
 
+      [comment]: # (This actually is the most platform independent comment)
+
       helm template mywebapp-release webapp1
 
       helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml
