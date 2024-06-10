@@ -64,7 +64,7 @@
 
       # Test the rendering of our template
 
-      [comment]: # (This actually is the most platform independent comment)
+      [comment]: # (Test the rendering of our template)
 
       helm template mywebapp-release webapp1
 
