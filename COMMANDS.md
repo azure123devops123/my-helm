@@ -70,7 +70,7 @@
 
       helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml
 
-- [x] Basic Commands for templating your web application for different environments (dev, prod):
+# - [x] Basic Commands for templating your web application for different environments (dev, prod):
 
       kubectl create namespace dev
 
