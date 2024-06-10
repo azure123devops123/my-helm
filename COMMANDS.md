@@ -64,7 +64,7 @@
 
       # Test the rendering of our template
 
-      - [x] Test the rendering of our template
+      // Test the rendering of our template
 
       helm template mywebapp-release webapp1
 
