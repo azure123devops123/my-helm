@@ -34,11 +34,9 @@
 
          helm ls -n dev
 
-         helm ls --all-namespaces    OR      helm ls -A
+         helm ls --all-namespaces    OR      helm ls -A    OR      helm ls -a -A
 
-         helm ls -A -a
-
-         helm status my-prometheus -n dev
+         helm status my-prometheus-dev -n dev
 
          helm upgrade my-prometheus-dev prometheus-community/prometheus --version 25.21.0 -n dev
 
@@ -62,8 +60,10 @@
 
          curl localhost:51311/hello
 
-
 ## Basic Commands for templating your web application: ##
+
+      # Test the rendering of our template
+      helm template mywebapp-release webapp1
 
       helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml
 
