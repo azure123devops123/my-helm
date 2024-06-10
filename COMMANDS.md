@@ -2,9 +2,9 @@
 
 1. K8s cluster up and running (Pre-requisite):
 
-      minikube start
+         minikube start
 
-      minikube status
+         minikube status
 
 2. K8s CLI (kubectl) must installed (Pre-requisite):
 
@@ -52,7 +52,7 @@
 
          helm create webapp1
 
-         tree webapp1        # REMOVE UNNECESSARY FILES AND DIRECTORIES + ADD YOUR MANIFESTS FILES + EDIT NOTES.txt FILE
+         tree webapp1    # REMOVE UNNECESSARY FILES AND DIRECTORIES + ADD YOUR MANIFESTS FILES + EDIT NOTES.txt FILE
 
          helm install mywebapp-release webapp1/
 
