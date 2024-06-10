@@ -60,7 +60,7 @@
 
          curl localhost:51311/hello
 
-## :smile: Basic Commands for templating your web application: ##
+## :s Basic Commands for templating your web application: ##
 
       # Test the rendering of our template
 
@@ -70,7 +70,7 @@
 
       helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml
 
-## :WritingHand: ✍🏼 Basic Commands for templating your web application for different environments (dev, prod):
+## ☑️ Basic Commands for templating your web application for different environments (dev, prod):
 
       kubectl create namespace dev
 
