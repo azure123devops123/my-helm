@@ -1,4 +1,4 @@
-## :smile: MacOSX Installation: ##
+## :excellent: MacOSX Installation: ##
 
 1. K8s cluster up and running (Pre-requisite):
 
