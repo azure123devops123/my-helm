@@ -64,7 +64,7 @@
 
       <!---
       Test the rendering of our template
-      -->
+      --->
       helm template mywebapp-release webapp1
 
       helm upgrade mywebapp-release webapp1/ --values webapp1/values.yaml
