@@ -60,7 +60,7 @@
 
          curl localhost:51311/hello
 
-## Basic Commands for templating your web application: ##
+## :smile: Basic Commands for templating your web application: ##
 
       # Test the rendering of our template
 
