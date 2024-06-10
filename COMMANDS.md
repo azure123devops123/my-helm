@@ -62,7 +62,7 @@
 
 ## Basic Commands for templating your web application: ##
 
-      <!-- Test the rendering of our template -->
+      # Test the rendering of our template
 
       [comment]: # (This actually is the most platform independent comment)
 
